@@ -1,9 +1,32 @@
 <template>
-  <Tutorial/>
+  <div>
+    <Tutorial />
+    <p>{{ counter }}</p>
+  </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
+<script>
 
-export default Vue.extend({})
+export default {
+  data () {
+    return {
+      counter: 'value'
+    }
+  },
+  // 你想要在头部设立的所有标签这里都跟你弄好了，还是很牛逼的
+  head () {
+    return {
+      title: '这个是首页把',
+      mata: [{
+        name: 'description',
+        hid: 'description',
+        content: 'login page'
+      }],
+      link: [{
+        rel: 'favicon',
+        href: 'favicon.ico'
+      }]
+    }
+  }
+}
 </script>
