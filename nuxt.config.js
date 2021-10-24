@@ -16,6 +16,19 @@ export default {
     ]
   },
 
+  // Clobal page router 配置
+  // router: {
+  //   // 额外的路由规则，我自动生成的路由配置中，没有这个的优先级别高
+  //   extendRoutes (routes, resolve) {
+  //     routes.push({
+  //       path: '/foo',
+  //       components: resolve(__dirname, 'page/othername.vue')
+  //     })
+  //   }
+  //   // 路由的中间介
+  //   // middleware: ['auth']
+  // },
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
   ],
