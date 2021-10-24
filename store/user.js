@@ -11,15 +11,15 @@ export const mutations = {
 
 export const getters = {
   isLogin (state) {
-    return !state.token
+    // 这样的一个小细节操作，就是一个布尔值了 ，难道说
+    return !!state.token
   }
 }
 
 export const actions = {
   login ({ commit, getters }, u) {
-    return this.$axios.$post('/api/login', u).then(({ token }) => {
+    return this.$login(u).then(({ token }) => {
       if (token) {
-        // console.log(token)
         commit('init', token)
       }
       return getters.isLogin

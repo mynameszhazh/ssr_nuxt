@@ -4,6 +4,7 @@
  */
 export default function ({ route, redirect, store }) {
   if (!store.state.user.token) {
+    // console.log(111)
     redirect('/login?redirect=' + route.path)
   }
 }
